@@ -32,9 +32,34 @@ return {
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+    [";"] = {
+      ":"
+    },
+    [":"] = {
+      ";"
+    },
+    ["q;"] = {
+      "q:"
+    },
+    ["<C-C>"] = {
+      'V"+y',
+      desc = "quick copy to system clipboard."
+    }
   },
   t = {
     -- setting a mapping to false will disable it
     -- ["<esc>"] = false,
+    ["jk"] = {
+      "<C-\\><C-n>"
+    }
   },
+  x = {
+    [";"] = {
+      ":"
+    },
+    ["<C-C>"] = {
+      '"+y',
+      desc = "quick copy to system clipboard."
+    }
+  }
 }
