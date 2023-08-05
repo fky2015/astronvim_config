@@ -44,7 +44,37 @@ return {
     ["<C-C>"] = {
       'V"+y',
       desc = "quick copy to system clipboard."
-    }
+    },
+    ["gl"] = {
+      "2g;"
+    },
+    ["<leader>z"] = {
+      function()
+        require("zen-mode").toggle { window = { width = 0.90 } }
+      end,
+      desc = "zen mode",
+    },
+    ["<leader>ca"] = {
+      'ggvG"+Y<c-o>'
+    },
+    ["<leader>T"] = {
+      ':tabnew %<CR>'
+    },
+    ["<ESC>"] = {
+      '<nop>'
+    },
+    ["<Left>"] = {
+      ':horizontal resize -10<CR>'
+    },
+    ["<Right>"] = {
+      ':horizontal resize +10<CR>'
+    },
+    ["<Up>"] = {
+      ':vertical resize +10<CR>'
+    },
+    ["<Down>"] = {
+      ':vertical resize +10<CR>'
+    },
   },
   t = {
     -- setting a mapping to false will disable it

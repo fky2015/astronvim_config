@@ -11,6 +11,12 @@ return {
     opts = {
       -- latte, frappe, macchiato, mocha
       flavour = "frappe",
+      color_overrides = {
+        frappe = {
+          -- default: #babbf1
+          lavender = "#babbfc",
+        },
+      },
       integrations = {
         sandwich = false,
         noice = true,
@@ -44,5 +50,8 @@ return {
       },
     },
   },
+  { import = "astrocommunity.pack.cpp" },
+  { import = "astrocommunity.git.diffview-nvim" },
+  { import = "astrocommunity.completion.cmp-cmdline" }
   -- { import = "astrocommunity.completion.copilot-lua-cmp" },
 }
