@@ -64,16 +64,40 @@ return {
       '<nop>'
     },
     ["<Left>"] = {
-      ':horizontal resize -10<CR>'
+      ':vertical resize -10<CR>'
     },
     ["<Right>"] = {
-      ':horizontal resize +10<CR>'
+      ':vertical resize +10<CR>'
     },
     ["<Up>"] = {
-      ':vertical resize +10<CR>'
+      ':horizontal resize +10<CR>'
     },
     ["<Down>"] = {
-      ':vertical resize +10<CR>'
+      ':horizontal resize -10<CR>'
+    },
+    ["<LocalLeader>l"] = {
+      ":LLToggle!<CR>",
+      desc = "Toggle loclist",
+    },
+    ["<LocalLeader>q"] = {
+      ":QFToggle!<CR>",
+      desc = "Toggle quickfix",
+    },
+    ["<c-\\>"] = {
+      "<cmd>ToggleTerm<cr>",
+      desc = "Toggle terminal",
+    },
+    ["<F4>"] = {
+      '<CMD>lua require("FTerm").toggle()<CR>',
+      desc = "Toggle a float terminal",
+    },
+    ["<leader>n"] = {
+      "<cmd>Neotree toggle<cr>",
+      desc = "Toggle Explorer"
+    },
+    ["=="] = {
+      "<cmd>lua require('oil').open()<cr>",
+      desc = "Open parent directory"
     },
   },
   t = {
@@ -81,7 +105,15 @@ return {
     -- ["<esc>"] = false,
     ["jk"] = {
       "<C-\\><C-n>"
-    }
+    },
+    ["<F4>"] = {
+      '<CMD>lua require("FTerm").toggle()<CR>',
+      desc = "Toggle a float terminal",
+    },
+    ["<c-\\>"] = {
+      "<cmd>ToggleTerm<cr>",
+      desc = "Toggle terminal",
+    },
   },
   x = {
     [";"] = {

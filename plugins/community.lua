@@ -52,6 +52,10 @@ return {
   },
   { import = "astrocommunity.pack.cpp" },
   { import = "astrocommunity.git.diffview-nvim" },
-  { import = "astrocommunity.completion.cmp-cmdline" }
+  { import = "astrocommunity.completion.cmp-cmdline" },
+  { import = "astrocommunity.debugging.nvim-bqf" },
+  { import = "astrocommunity.scrolling.nvim-scrollbar" },
+  { import = "astrocommunity.media.vim-wakatime" },
+  { import = "astrocommunity.file-explorer.oil-nvim" }
   -- { import = "astrocommunity.completion.copilot-lua-cmp" },
 }

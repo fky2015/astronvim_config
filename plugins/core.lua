@@ -1,4 +1,13 @@
 return {
+  {
+    "akinsho/toggleterm.nvim",
+    opts = {
+      open_mapping = nil,
+      direction = 'horizontal',
+      shader_terminals = false,
+    },
+  },
+
   -- You can disable default plugins as follows:
   -- { "max397574/better-escape.nvim", enabled = false },
   --

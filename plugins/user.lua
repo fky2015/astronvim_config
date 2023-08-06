@@ -46,6 +46,65 @@ return {
       require("alpha").setup(opts)
     end
   },
+  {
+    "stevearc/qf_helper.nvim",
+    cmd = { "QFToggle", "LLToggle" },
+    config = function()
+      require("qf_helper").setup()
+    end
+  },
+  {
+    "numToStr/FTerm.nvim",
+    opts = {
+      dimensions = {
+        height = 0.9, -- Height of the terminal window
+        width = 0.9,  -- Width of the terminal window
+      },
+    }
+  },
+  {
+    "kosayoda/nvim-lightbulb",
+    event = { "CursorHold", "CursorHoldI" },
+    opts = {
+      autocmd = { enabled = true },
+      number = {
+        enabled = true,
+      },
+      sign = {
+        enabled = false,
+      }
+    },
+    config = function(opts)
+      require("nvim-lightbulb").setup(opts)
+      vim.cmd [[highlight LightBulbNumber guifg=#FFce0e]]
+    end
+  },
+  {
+    "uga-rosa/ccc.nvim",
+    config = function()
+      local ccc = require("ccc")
+
+      ccc.setup({
+        -- Your preferred settings
+        -- Example: enable highlighter
+        highlighter = {
+          auto_enable = true,
+          lsp = true,
+        },
+        disable_default_mappings = true
+      })
+    end
+  },
+
+
+  -- {
+  --   "akinsho/toggleterm.nvim",
+  --   opts = {
+  --     open_mapping = [[<c-\>]],
+  --     shade_terminals = false,
+  --   },
+  -- },
+
   -- You can also add new plugins here as well:
   -- Add plugins, the lazy syntax
   -- "andweeb/presence.nvim",
