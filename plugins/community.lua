@@ -56,6 +56,7 @@ return {
   { import = "astrocommunity.debugging.nvim-bqf" },
   { import = "astrocommunity.scrolling.nvim-scrollbar" },
   { import = "astrocommunity.media.vim-wakatime" },
-  { import = "astrocommunity.file-explorer.oil-nvim" }
+  { import = "astrocommunity.file-explorer.oil-nvim" },
+  { import = "astrocommunity.motion.leap-nvim"},
   -- { import = "astrocommunity.completion.copilot-lua-cmp" },
 }
