@@ -95,31 +95,8 @@ return {
       })
     end
   },
-  {"tpope/vim-fugitive", lazy = false},
+  { "tpope/vim-fugitive",  lazy = false },
 
-
-  -- {
-  --   "akinsho/toggleterm.nvim",
-  --   opts = {
-  --     open_mapping = [[<c-\>]],
-  --     shade_terminals = false,
-  --   },
-  -- },
-
-  -- You can also add new plugins here as well:
-  -- Add plugins, the lazy syntax
-  -- "andweeb/presence.nvim",
-  -- {
-  --   "ray-x/lsp_signature.nvim",
-  --   event = "BufRead",
-  --   config = function()
-  --     require("lsp_signature").setup()
-  --   end,
-  -- },
-  -- -- this plugin will be loaded when using `:ZenMode`
+  -- this plugin will be loaded when using `:ZenMode`
   { "folke/zen-mode.nvim", lazy = true },
-  -- {
-  --   'camspiers/animate.vim',
-  --   event = 'VimEnter',
-  -- }
 }
