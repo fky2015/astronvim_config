@@ -99,4 +99,12 @@ return {
 
   -- this plugin will be loaded when using `:ZenMode`
   { "folke/zen-mode.nvim", lazy = true },
+  {
+    'prochri/telescope-all-recent.nvim',
+    dependencies = { "nvim-telescope/telescope.nvim" },
+    config = function()
+      require 'telescope-all-recent'.setup {}
+    end,
+  },
+
 }
