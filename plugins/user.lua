@@ -99,4 +99,5 @@ return {
 
   -- this plugin will be loaded when using `:ZenMode`
   { "folke/zen-mode.nvim", lazy = true },
+  { "tpope/vim-unimpaired", lazy = false },
 }
