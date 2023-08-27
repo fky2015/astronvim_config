@@ -40,7 +40,7 @@ return {
     opts = {
       suggestion = {
         keymap = {
-          accept = "<C-l>",
+          accept = "<C-j>",
           accept_word = false,
           accept_line = false,
           next = "<C-.>",
@@ -59,5 +59,5 @@ return {
   { import = "astrocommunity.file-explorer.oil-nvim" },
   { import = "astrocommunity.motion.leap-nvim" },
   { import = "astrocommunity.editing-support.neogen" },
-  -- { import = "astrocommunity.completion.copilot-lua-cmp" },
+  { import = "astrocommunity.completion.copilot-lua-cmp" },
 }
