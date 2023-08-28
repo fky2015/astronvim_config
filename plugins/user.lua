@@ -107,4 +107,13 @@ return {
       require 'telescope-all-recent'.setup {}
     end,
   },
+  {
+    "Wansmer/treesj",
+    keys = { { "<leader>m", "<CMD>TSJToggle<CR>", desc = "Toggle Treesitter Join" },
+      { "<leader>j", "<CMD>TSJSplit<CR>", desc = "Treesitter Split" },
+      { "<leader>J", "<CMD>TSJJoin<CR>", desc = "Treesitter Join" },
+    },
+    cmd = { "TSJToggle", "TSJSplit", "TSJJoin" },
+    opts = { use_default_keymaps = false },
+  }
 }
