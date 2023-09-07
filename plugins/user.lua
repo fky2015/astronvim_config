@@ -99,9 +99,13 @@ return {
   { "folke/zen-mode.nvim", lazy = true },
   { "tpope/vim-unimpaired", lazy = false },
   {
-    "prochri/telescope-all-recent.nvim",
-    dependencies = { "nvim-telescope/telescope.nvim" },
-    config = function() require("telescope-all-recent").setup {} end,
+    "nvim-telescope/telescope.nvim",
+    dependencies = {
+      "prochri/telescope-all-recent.nvim",
+      cmd = { "Telescope" },
+      dependencies = { "kkharji/sqlite.lua" },
+      config = function() require("telescope-all-recent").setup {} end,
+    },
   },
   {
     "Wansmer/treesj",
