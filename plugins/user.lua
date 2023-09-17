@@ -96,13 +96,12 @@ return {
   { "tpope/vim-fugitive", lazy = false },
 
   -- this plugin will be loaded when using `:ZenMode`
-  { "folke/zen-mode.nvim", lazy = true },
+  { "folke/zen-mode.nvim" },
   { "tpope/vim-unimpaired", lazy = false },
   {
     "nvim-telescope/telescope.nvim",
     dependencies = {
       "prochri/telescope-all-recent.nvim",
-      cmd = { "Telescope" },
       dependencies = { "kkharji/sqlite.lua" },
       config = function() require("telescope-all-recent").setup {} end,
     },
