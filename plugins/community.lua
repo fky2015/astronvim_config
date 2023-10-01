@@ -60,5 +60,6 @@ return {
   { import = "astrocommunity.motion.leap-nvim" },
   { import = "astrocommunity.editing-support.neogen" },
   { import = "astrocommunity.completion.copilot-lua-cmp" },
-  { import = "astrocommunity/editing-support/todo-comments-nvim" },
+  { import = "astrocommunity.editing-support.todo-comments-nvim" },
+  { import = "astrocommunity.motion.nvim-surround"},
 }
