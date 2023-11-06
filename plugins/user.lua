@@ -132,6 +132,7 @@ return {
               workspaces = {
                 notes = "~/notes",
               },
+              default_workspace = "notes",
             },
           },
           ["core.completion"] = {

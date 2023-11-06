@@ -9,8 +9,8 @@ return {
     pin_plugins = nil, -- nil, true, false (nil will pin plugins on stable only)
     skip_prompts = false, -- skip prompts about breaking changes
     show_changelog = true, -- show the changelog after performing an update
-    auto_quit = false,     -- automatically quit the current session after a successful update
-    remotes = {            -- easily add new remotes to track
+    auto_quit = false, -- automatically quit the current session after a successful update
+    remotes = { -- easily add new remotes to track
       --   ["remote_name"] = "https://remote_url.come/repo.git", -- full remote url
       --   ["remote2"] = "github_user/repo", -- GitHub user/repo shortcut,
       --   ["remote3"] = "github_user", -- GitHub user assume AstroNvim fork
@@ -30,6 +30,28 @@ return {
         "williamboman/mason-lspconfig.nvim",
         opts = {
           ensure_installed = { "clangd" }, -- automatically install lsp
+        },
+      },
+      plugins = {
+        { -- override nvim-cmp plugin
+          "hrsh7th/nvim-cmp",
+          -- override the options table that is used in the `require("cmp").setup()` call
+          opts = function(_, opts)
+            -- opts parameter is the default options table
+            -- the function is lazy loaded so cmp is able to be required
+            local cmp = require "cmp"
+            -- modify the sources part of the options table
+            opts.sources = cmp.config.sources {
+              { name = "nvim_lsp", priority = 1000 },
+              { name = "luasnip", priority = 750 },
+              { name = "buffer", priority = 500 },
+              { name = "path", priority = 250 },
+              { name = "neorg" },
+            }
+
+            -- return the new table to be used
+            return opts
+          end,
         },
       },
     },

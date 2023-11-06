@@ -63,5 +63,5 @@ return {
   { import = "astrocommunity.editing-support.todo-comments-nvim" },
   { import = "astrocommunity.motion.nvim-surround" },
   { import = "astrocommunity.markdown-and-latex.vimtex" },
-  { import = "astrocommunity.color.headlines-nvim"},
+  { import = "astrocommunity.color.headlines-nvim" },
 }
