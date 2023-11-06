@@ -152,4 +152,14 @@ return {
     dependencies = "nvim-treesitter/nvim-treesitter",
     config = true, -- or `opts = {}`
   },
+  {
+    "mattn/emmet-vim",
+    keys = {
+      {
+        "<C-y>,",
+        mode = { "n", "i" },
+        desc = "Unfold via emmet.",
+      },
+    },
+  },
 }
