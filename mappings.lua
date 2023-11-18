@@ -33,47 +33,45 @@ return {
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
     [";"] = {
-      ":"
+      ":",
     },
     [":"] = {
-      ";"
+      ";",
     },
     ["q;"] = {
-      "q:"
+      "q:",
     },
     ["<C-C>"] = {
       'V"+y',
-      desc = "quick copy to system clipboard."
+      desc = "quick copy to system clipboard.",
     },
     ["gl"] = {
-      "2g;"
+      "2g;",
     },
     ["<leader>z"] = {
-      function()
-        require("zen-mode").toggle { window = { width = 0.90 } }
-      end,
+      function() require("zen-mode").toggle { window = { width = 0.90 } } end,
       desc = "zen mode",
     },
     ["<leader>ca"] = {
-      'ggvG"+Y<c-o>'
+      'ggvG"+Y<c-o>',
     },
     ["<leader>T"] = {
-      ':tabnew %<CR>'
+      ":tabnew %<CR>",
     },
     ["<ESC>"] = {
-      '<nop>'
+      "<nop>",
     },
     ["<Left>"] = {
-      ':vertical resize -10<CR>'
+      ":vertical resize -10<CR>",
     },
     ["<Right>"] = {
-      ':vertical resize +10<CR>'
+      ":vertical resize +10<CR>",
     },
     ["<Up>"] = {
-      ':horizontal resize +10<CR>'
+      ":horizontal resize +10<CR>",
     },
     ["<Down>"] = {
-      ':horizontal resize -10<CR>'
+      ":horizontal resize -10<CR>",
     },
     ["<LocalLeader>l"] = {
       ":LLToggle!<CR>",
@@ -93,18 +91,23 @@ return {
     },
     ["<leader>n"] = {
       "<cmd>Neotree toggle<cr>",
-      desc = "Toggle Explorer"
+      desc = "Toggle Explorer",
     },
     ["=="] = {
       "<cmd>lua require('oil').open()<cr>",
-      desc = "Open parent directory"
+      desc = "Open parent directory",
+    },
+    -- buffer -> gdb
+    ["<leader>bg"] = {
+      function() vim.fn.setreg("+", vim.fn.expand "%" .. ":" .. vim.fn.line ".") end,
+      desc = "Copy current <FILE>:<LINE> for gdb",
     },
   },
   t = {
     -- setting a mapping to false will disable it
     -- ["<esc>"] = false,
     ["jk"] = {
-      "<C-\\><C-n>"
+      "<C-\\><C-n>",
     },
     ["<F4>"] = {
       '<CMD>lua require("FTerm").toggle()<CR>',
@@ -117,11 +120,11 @@ return {
   },
   x = {
     [";"] = {
-      ":"
+      ":",
     },
     ["<C-C>"] = {
       '"+y',
-      desc = "quick copy to system clipboard."
-    }
-  }
+      desc = "quick copy to system clipboard.",
+    },
+  },
 }
