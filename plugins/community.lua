@@ -65,4 +65,5 @@ return {
   { import = "astrocommunity.markdown-and-latex.vimtex" },
   { import = "astrocommunity.color.headlines-nvim" },
   { import = "astrocommunity.utility.noice-nvim" },
+  { import = "astrocommunity.motion.marks-nvim" },
 }
