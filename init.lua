@@ -63,6 +63,8 @@ return {
         enabled = true, -- enable or disable format on save globally
         ignore_filetypes = { -- disable format on save for specified filetypes
           "cpp",
+          "python",
+          "bash",
         },
       },
       disabled = { -- disable formatting capabilities for the listed language servers
