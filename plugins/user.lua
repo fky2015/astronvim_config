@@ -153,6 +153,10 @@ return {
     config = true, -- or `opts = {}`
   },
   {
+    "eandrju/cellular-automaton.nvim",
+    cmd = "CellularAutomaton",
+  },
+  {
     "mattn/emmet-vim",
     keys = {
       {
