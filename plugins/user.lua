@@ -87,7 +87,6 @@ return {
         version = "^1.0.0",
         config = function()
           require("telescope").load_extension "live_grep_args"
-          vim.print "asdfasfasdf"
 
           local telescope = require "telescope"
           local lga_actions = require "telescope-live-grep-args.actions"
@@ -156,9 +155,11 @@ return {
   },
   {
     "nvim-neorg/neorg",
+    ft = "norg",
     build = ":Neorg sync-parsers",
     dependencies = { "nvim-lua/plenary.nvim" },
-    event = "VeryLazy",
+    cmd = { "Neorg" },
+    -- event = "VeryLazy",
     config = function()
       require("neorg").setup {
         load = {
@@ -169,6 +170,7 @@ return {
             config = {
               workspaces = {
                 notes = "~/notes",
+                works = "~/works",
               },
               default_workspace = "notes",
             },
@@ -176,10 +178,19 @@ return {
           ["core.completion"] = {
             config = {
               engine = "nvim-cmp",
+              name = "[Neorg]",
             },
           }, -- Enables support for completion plugins
-          ["core.journal"] = {}, -- Enables support for the journal module
+          ["core.journal"] = { config = {
+            strategy = "flat",
+            workspace = "notes",
+          } }, -- Enables support for the journal module
           ["core.highlights"] = {},
+          ["core.export"] = {},
+          ["core.esupports.metagen"] = { config = { type = "auto", update_date = true } },
+          ["core.presenter"] = { config = { zen_mode = "zen-mode" } },
+          ["core.summary"] = {},
+          -- ["core.ui.calendar"] = {},
         },
       }
     end,
