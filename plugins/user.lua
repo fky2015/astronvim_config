@@ -115,6 +115,11 @@ return {
     },
   },
   {
+    "dhruvasagar/vim-table-mode",
+    cmd = "TableModeToggle",
+    config = function() vim.g.table_mode_corner = "|" end,
+  },
+  {
     "uga-rosa/ccc.nvim",
     config = function()
       local ccc = require "ccc"
