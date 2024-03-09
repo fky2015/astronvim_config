@@ -102,6 +102,11 @@ return {
       function() vim.fn.setreg("+", vim.fn.expand "%" .. ":" .. vim.fn.line ".") end,
       desc = "Copy current <FILE>:<LINE> for gdb",
     },
+    -- Disable force quit
+    ["<C-q>"] = {
+      function() end,
+      desc = "Do nothing",
+    },
   },
   t = {
     -- setting a mapping to false will disable it
