@@ -62,7 +62,7 @@ return {
   { import = "astrocommunity.completion.copilot-lua-cmp" },
   { import = "astrocommunity.editing-support.todo-comments-nvim" },
   { import = "astrocommunity.motion.nvim-surround" },
-  { import = "astrocommunity.markdown-and-latex.vimtex" },
+  -- { import = "astrocommunity.markdown-and-latex.vimtex" },
   { import = "astrocommunity.color.headlines-nvim" },
   { import = "astrocommunity.utility.noice-nvim" },
   { import = "astrocommunity.motion.marks-nvim" },

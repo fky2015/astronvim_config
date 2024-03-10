@@ -1,4 +1,4 @@
-return {
+local ret = {
   {
     "goolord/alpha-nvim",
     cmd = "Alpha",
@@ -221,3 +221,7 @@ return {
     },
   },
 }
+
+table.insert(ret, require "user.plugins.user.lang")
+
+return ret
